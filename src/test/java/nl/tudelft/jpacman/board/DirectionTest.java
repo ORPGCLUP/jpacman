@@ -15,8 +15,43 @@ public class DirectionTest {
      * Do we get the correct delta when moving north?
      */
     @Test
-    void testNorth() {
+    void testNorth1() {
         Direction north = Direction.valueOf("NORTH");
         assertThat(north.getDeltaY()).isEqualTo(-1);
+    }
+    @Test
+    void testNorth2() {
+        Direction north = Direction.valueOf("NORTH");
+        assertThat(north.getDeltaX()).isEqualTo(0);
+    }
+    @Test
+    void testSouth1() {
+        Direction south = Direction.valueOf("SOUTH");
+        assertThat(south.getDeltaY()).isEqualTo(1);
+    }
+    @Test
+    void testSouth2() {
+        Direction south = Direction.valueOf("SOUTH");
+        assertThat(south.getDeltaX()).isEqualTo(0);
+    }
+    @Test
+    void testEast1() {
+        Direction east = Direction.valueOf("EAST");
+        assertThat(east.getDeltaX()).isEqualTo(1);
+    }
+    @Test
+    void testEast2() {
+        Direction east = Direction.valueOf("EAST");
+        assertThat(east.getDeltaY()).isEqualTo(0);
+    }
+    @Test
+    void testWest1() {
+        Direction west = Direction.valueOf("WEST");
+        assertThat(west.getDeltaX()).isEqualTo(-1);
+    }
+    @Test
+    void testWest2() {
+        Direction west = Direction.valueOf("WEST");
+        assertThat(west.getDeltaY()).isEqualTo(0);
     }
 }
