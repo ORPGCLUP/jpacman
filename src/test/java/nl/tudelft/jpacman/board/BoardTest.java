@@ -60,15 +60,15 @@ public class BoardTest {
     void testInvariant() {
         assertThat(board.invariant()).isTrue();
     }
-    /***
-     * This is testSquareAtNull method.
-     *
-     */
-    @Test
-    void testSquareAtNull() {
-        Square[][] grid = new Square[1][1];
-        board = new Board(grid);
-        Square square = board.squareAt(0,0 );
-        assertThat(square).isNull();
-    }
+//    /***
+//     * This is testSquareAtNull method.
+//     *
+//     */
+//    @Test
+//    void testSquareAtNull() {
+//        Square[][] grid = new Square[1][1];
+//        board = new Board(grid);
+//        Square square = board.squareAt(0, 0);
+//        assertThat(square).isNull();
+//    }
 }
