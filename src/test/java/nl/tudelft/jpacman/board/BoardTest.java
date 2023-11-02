@@ -9,7 +9,10 @@ import org.junit.jupiter.api.Test;
 public class BoardTest {
 
     private Board board;
-
+    /***
+     * This is set up method beforeEach.
+     *
+     */
     @BeforeEach
     void setUp() {
         Square[][] grid = new Square[1][1];
