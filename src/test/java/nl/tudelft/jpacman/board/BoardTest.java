@@ -14,37 +14,61 @@ public class BoardTest {
      *
      */
     @BeforeEach
-    void setUp() {
-        Square[][] grid = new Square[1][1];
-        grid[0][0] = new BasicSquare();
+    void setUp( ) {
+        Square[ ][ ] grid = new Square[1][1];
+        grid[0][0] = new BasicSquare( );
         board = new Board(grid);
     }
+    /***
+     * This is testGetWidth method.
+     *
+     */
     @Test
-    void testGetWidth() {
+    void testGetWidth( ) {
         assertThat(board.getWidth()).isEqualTo(1);
     }
+    /***
+     * This is testGetHeight method.
+     *
+     */
     @Test
-    void testGetHeight() {
-        assertThat(board.getHeight()).isEqualTo(1);
+    void testGetHeight( ) {
+        assertThat(board.getHeight( )).isEqualTo(1);
     }
+    /***
+     * This is testBasicSquare method.
+     *
+     */
     @Test
-    void testBasicSquare() {
-        assertThat(board).isNotNull();
+    void testBasicSquare( ) {
+        assertThat(board).isNotNull( );
     }
+    /***
+     * This is testSquareAt method.
+     *
+     */
     @Test
-    void testSquareAt() {
+    void testSquareAt( ) {
         Square square = board.squareAt(0, 0);
         assertThat(square).isInstanceOf(BasicSquare.class);
     }
+    /***
+     * This is testInvariant method.
+     *
+     */
     @Test
-    void testInvariant() {
-        assertThat(board.invariant()).isTrue();
+    void testInvariant( ) {
+        assertThat(board.invariant( )).isTrue( );
     }
+    /***
+     * This is testSquareAtNull method.
+     *
+     */
     @Test
     void testSquareAtNull() {
-        Square[][] grid = new Square[1][1];
+        Square[ ][ ] grid = new Square[1][1];
         board = new Board(grid);
         Square square = board.squareAt(0,0 );
-        assertThat(square).isNull();
+        assertThat(square).isNull( );
     }
 }
