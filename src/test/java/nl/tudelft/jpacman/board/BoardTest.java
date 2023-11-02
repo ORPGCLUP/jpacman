@@ -4,11 +4,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class BoardTest {
-
+    /***
+     * This is the BoardTest method.
+     *
+     */
     private Board board;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         Square[][] grid = new Square[1][1];
         grid[0][0] = new BasicSquare();
         board = new Board(grid);
